@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Exercício 01</h1>
+    <!--teste para o curso-->
+
+    <h1>Teste de JavaScript</h1>
+    <p>Olá, seja bem-vindo ao meu site</p>
+
+    <script>
+
+        var nome = prompt("Digite seu nome:");
+        var idade = prompt("Digite sua idade:");
+        var cidade = prompt("DIgite sua cidade:")
+        // para colocar na pagina o document.write é usado da seguinte forma
+        // document.write(` texto ${variavel} texto`);
+        document.write(`<p>Bem-Vindo ${nome}<br> Você tem ${idade} anos<br> Você mora em ${cidade}</p>`);
+
+        /*
+                        Exemplos de uso Node.js
+            a variavel quando recebe um valor como exemplo 
+
+            var num = 10
+
+            se colocarmos 
+
+            num = num + 5
+
+            ele vai somar 5 ao valor de num que é 10, então num vai ser 15
+
+            se eu colocar num-- ele vai subtrair 1 do valor de num, então num vai ser 14
+            
+            se eu colocar num++ ele vai somar 1 ao valor de num, então num vai ser 15
+
+            tipos de logicos 
+            ! negação
+            && conjunção
+            || disjunção
+
+            exemplo de uso
+
+            ! depois da ! é uma negação, ou seja, se for verdadeiro ele vai ser falso e se for falso ele vai ser verdadeiro
+
+            && é uma conjunção, ou seja, se as duas condições forem verdadeiras ele vai ser verdadeiro e se uma for falsa e outra verdadeira ele vai ser falso
+
+            True && True = True
+            True && False = False
+            False && True = False
+            False && False = False
+
+            || é uma disjunção, ou seja, se uma das condições for verdadeira ele vai ser verdadeiro e se as duas forem falsas ele vai ser falso
+
+            True || True = True
+            True || False = True
+            False || True = True
+            False || False = False
+
+        
+        */
+    </script>
+
 </body>
 </html>
