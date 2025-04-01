@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMs</title>
+    <style>
+        body {
+            background-color: lightslategray;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Eventos DOM</h1>
+    <p>Aqui esta o resultado</p>
+    <p>Aprendendo a usao o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+
+
+    <script>
+        // Seleção do corpo do documento
+        // Modifica a cor de fundo da página para preto
+        var corpo = window.document.body;
+        corpo.style.backgroundColor = "black";
+
+        // Seleção de elementos por Tag Name (Nome da Tag)
+        // Aqui estamos pegando o primeiro elemento <p> do documento
+        var p1 = window.document.getElementsByTagName('p')[0];
+
+        // Escreve no documento o conteúdo do primeiro parágrafo
+        window.document.write("Está escrito assim: " + p1.innerText);
+
+        // Modifica a cor do texto do parágrafo para azul
+        p1.style.color = "blue";
+
+        // Seleção de elemento por ID
+        // Pegamos o elemento com ID 'msg' e modificamos seu estilo
+        var d = window.document.getElementById('msg');
+        d.style.backgroundColor = "red"; // Define a cor de fundo como vermelho
+        d.style.width = "200px"; // Define a largura da caixa como 200px
+
+        // Seleção de elemento por Query Selector
+        // querySelector pode selecionar elementos por ID, classe ou tag, 
+        // mas ele retorna apenas o primeiro elemento correspondente
+        var d = window.document.querySelector('#msg');
+        d.style.color = "black"; // Define a cor do texto como preto
+        d.style.fontSize = "20px"; // Aumenta o tamanho da fonte para 20px
+        d.style.textAlign = "center"; // Centraliza o texto
+
+    </script>
+</body>
+
+</html>
