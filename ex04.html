@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Somando Valores</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: 150px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="button"] {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Somando Valores</h1>
+
+    <input type="number" name="txtn1" id="txtn1" placeholder="Primeiro Valor"
+        onkeydown="navegarcomEnter(event, 'txtn2')" />
+    +
+
+    <input type="text" name="txtn2" id="txtn2" placeholder="Segundo Valor"
+        onkeydown="navegarcomEnter(event, 'btnsomar')" />
+
+    <input type="button" value="Somar" id="btnsomar" onclick="somar()" onkeydown="navegarcomEnter(event, 'res')" />
+
+    <div id="res">Resultado</div>
+    <script>
+
+        function navegarcomEnter(event, proximoElemento) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                if (proximoElemento) {
+                    var elemento = document.getElementById(proximoElemento);
+
+                    // Se for o botão de somar, clica nele
+                    if (proximoElemento === "btnsomar") {
+                        elemento.click();
+                    } else {
+                        elemento.focus();
+                    }
+                } else {
+                    somar();
+                }
+            }
+        }
+
+        function somar() {
+            var n1 = window.document.getElementById("txtn1").value;
+            var n2 = window.document.querySelector("input#txtn2").value;
+            var s = Number(n1) + Number(n2);
+            var res = window.document.getElementById("res");
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`;
+        }
+        
+    </script>
+</body>
+
+</html>

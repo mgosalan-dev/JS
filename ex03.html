@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightslategray;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        #area {
+            width: 200px;
+            height: 200px;
+            background-color: royalblue;
+            text-align: center;
+            line-height: 200px; /* Centraliza verticalmente o texto */
+            margin: 20px auto; /* Centraliza horizontalmente o elemento */
+        }
+    </style>
+</head>
+<body>
+    <!--
+                            exemplo em bloco
+            <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Interaja</div>
+            -->
+
+            <!--        exemplo em Lista         -->
+    <div id="area">Interaja</div>
+
+    <script>
+        /* 
+                            exemplo em bloco
+
+        objeto do lado de fora é o mesmo para todos os eventos
+         var a = window.document.getElementById('area')
+        var a = window.document.getElementById('area')
+        
+
+        function clicar() {
+            
+            a.innerText = "Clicou!"
+            a.style.backgroundColor = "red"
+            a.style.color = "white"
+        }
+
+        function entrar() {
+            a.innerText = "Entrou!"
+            a.style.backgroundColor = "green"
+            a.style.color = "black"
+        }
+
+        function sair() {
+            a.innerText = "Saiu!"
+            a.style.backgroundColor = "blue"
+            a.style.color = "white"
+        }
+        */
+        // exemplo em lista
+        var a = document.getElementById('area')
+            a.addEventListener('click', clicar)
+            a.addEventListener('mouseenter', entrar)
+            a.addEventListener('mouseout', sair)
+        function clicar() {
+            a.innerText = "Clicou!"
+            a.style.backgroundColor = "red"
+            a.style.color = "white"
+        }
+        function entrar() {
+            a.innerText = "Entrou!"
+            a.style.backgroundColor = "green"
+            a.style.color = "black"
+        }
+        function sair() {
+            a.innerText = "Saiu!"
+            a.style.backgroundColor = "blue"
+            a.style.color = "white"
+        }
+        // exemplo em lista
+    </script>
+</body>
+</html>
