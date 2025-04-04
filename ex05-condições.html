@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAM</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: 150px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="button"] {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do Carro <input type="number" name="velocidade" id="velocidade" placeholder="km/h"
+        onkeydown="navegarcomEnter(event, 'resultado')">
+    <input type="button" value="Verificar" id= "resultado" onclick="verificaMulta()">
+    <p id="res"></p>
+
+    <script>
+        function navegarcomEnter(envent, proximoElemento) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                if (proximoElemento) {
+                    var elemento = document.getElementById(proximoElemento);
+                    elemento.focus();
+                }
+            }
+        }
+
+        function verificaMulta() {
+            var velocidade = document.getElementById("velocidade").value;
+            var resultado = document.getElementById("res");
+
+            if (velocidade > 80) {
+                resultado.innerHTML = `Você foi multado! a velocidade permitida maxima é de 80km/h e você estava a ${velocidade}km/h. Dirija sempre com o sinto de segurança!`;
+                resultado.style.color = "red";
+                resultado.style.fontWeight = "bold";
+
+            } else {
+                resultado.innerHTML = "Você não foi multado! Dirija sempre com o sinto de segurança!";
+                resultado.style.color = "green";
+                resultado.style.fontWeight = "bold";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #Res {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Verificando Nacionalidade</h1>
+
+
+    <input type="text" name="txtlevel" id="Nacionalidade" placeholder="Digite sua nacionalidade"
+        onkeydown="navegarcomEnter(event, 'btn')" />
+
+    <button id="btn" onclick="verificar()">Verificar</button>
+
+    <div id="Res">Resultado</div>
+
+    <script>
+        var btn = document.getElementById("btn");
+        // Adiciona o evento de teclado ao botão
+        btn.addEventListener("mouseenter", function () {
+            this.style.backgroundColor = "green";
+        });
+        btn.addEventListener("mouseout", function () {
+            this.style.backgroundColor = "#007bff";
+        });
+
+        // Função para navegar entre os campos com a tecla Enter
+        function navegarcomEnter(event, proximoElemento) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                if (proximoElemento) {
+                    var elemento = document.getElementById(proximoElemento);
+                    elemento.focus();
+                }
+            }
+        }
+        // Verifica a nacionalidade e exibe o resultado
+
+
+        function verificar() {
+            var nacionalidade = document.querySelector("input#Nacionalidade").value;
+            var res = document.querySelector("div#Res");
+
+            if (nacionalidade == "Brasil") {
+                res.innerHTML = "Você è Brasileiro";
+                res.style.color = "Green";
+                res.style.fontweight = "Bolder";
+            } else {
+                res.innerHTML = `vivendo em ${nacionalidade}, você é Estrangeiro.`;
+                res.style.color = "Red";
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
