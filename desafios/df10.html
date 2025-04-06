@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições aninhadas</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Idade Minima para saber se tenho que votar</h1>
+
+    <input type="text" name="txtvoto" id="idade" placeholder="Idade" onkeydown="navegarcomEnter(event, 'verificar')">
+
+    <button type="button" value="verif" id="verificar" onclick="vervoto()">Verifica</button>
+    <div id="Res">Resultado</div>
+
+    <script>
+        function navegarcomEnter(envent, proximoElemento) {
+            if(event.key === "Enter"){
+                event.preventDefault();
+                if(proximoElemento){
+                    var elemento = document.getElementById(proximoElemento); elemento.focus();
+                }
+            }
+        }
+
+        function vervoto(){
+            var idade = document.getElementById("idade").value;
+            var res = document.getElementById("Res");
+            res.innerHTML = ""; // Limpa o conteúdo anterior
+
+            switch (true) {
+                case (idade < 16):
+                res.innerHTML = "Você não vota."
+                break
+                
+                case (idade >= 16 && idade < 18):
+                res.innerHTML = "Voto Opcinal"
+                break
+
+                case (idade >= 18 && idade <= 66):
+                res.innerHTML = "Voto Obrigatorio"
+                break
+
+                default:
+                res.innerHTML = "Você já é idoso(a) não precisa votar"
+            }
+        } 
+    </script>
+</body>
+</html>
