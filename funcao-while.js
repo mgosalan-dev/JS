@@ -1,5 +1,5 @@
 var c = 1
-while (c <= 3) { // esse é um laço simprles
+while (c <= 3) { // esse é um laço simples
     console.log(`Passo ${c}`)
     c++ // isso representa c+1 , c+2 até da 8 certinho
 }
@@ -15,5 +15,5 @@ do {
     b++
 } while (b <= 6)
 
-console.log()
+console.log('')
 console.log('é mais comum vermos a versão while pois é mais limpa e direta')

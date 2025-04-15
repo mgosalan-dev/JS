@@ -4,16 +4,25 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
-    {
-        "name": "Attach by Process ID",
-        "processId": "${command:PickProcess}",
-        "request": "attach",
-        "skipFiles": [
-            "<node_internals>/**"
-        ],
-        "type": "node"
-    },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Depurar Arquivo Atual",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${file}",
+            "runtimeExecutable": "C:/Program Files/nodejs/node.exe"
+        },
+        {
+            "name": "Attach by Process ID",
+            "processId": "${command:PickProcess}",
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
         {
             "type": "node-terminal",
             "name": "Terminal de Depuração de JavaScript",
