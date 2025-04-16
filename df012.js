@@ -5,25 +5,24 @@ function contar() {
   let res = document.getElementById("resultado");
 
   if (ini.value.length == 0 || fi.value.length == 0 || pas.value.length == 0) {
-    alert('[ERRO Faltam dados!!!]')
+    alert("[ERRO Faltam dados!!!]");
   } else {
-      res.innerHTML = 'Contando: <br>'
-      let i = Number(ini.value);
-      let f = Number(fi.value);
-      let p = Number(pas.value);
+    res.innerHTML = "Contando: <br>";
+    let i = Number(ini.value);
+    let f = Number(fi.value);
+    let p = Number(pas.value);
 
-    if (i < f){    
+    if (i < f) {
       // contagem Crescente
       for (let c = i; c <= f; c += p) {
-        res.innerHTML += `${c} ➡️`
+        res.innerHTML += `${c} ➡️`;
       }
-
     } else {
       // Conatagem Regressiva
-      for (let c = i; c>= f; c+= p){
-        res.innerHTML += `${c} ➡️` 
+      for (let c = i; c >= f; c += p) {
+        res.innerHTML += `${c} ➡️`;
       }
     }
-    res.innerHTML += '🏴‍☠️'
+    res.innerHTML += "🏴‍☠️";
   }
 }
