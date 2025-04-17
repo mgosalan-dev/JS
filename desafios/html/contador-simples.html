@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contador simples</title>
+  <title>Contador Simples</title>
+  <link rel="stylesheet" href="../css/contador-simples.css">
 </head>
 <body>
   <header>
-    <h1>Contador simples 10</h1>
+    <h1>Contador Simples 10</h1>
   </header>
   <section>
     <div>
-      <p>
-        Inicio: <input type="number" name="txtn" id="txti" placeholder="ex: 1">
-      </p>
-      <p>Fim: <input type="number" name="txtf" id="txtf" placeholder="final da contagem"></p>
-      <p>Passo: <input type="number" name="txtp" id="txtp" placeholder="Quantos pular"></p>
-      <input type="button" value="contar" onclick="contar()">
+      <p>Início: <input type="number" id="txti" placeholder="ex: 1"></p>
+      <p>Fim: <input type="number" id="txtf" placeholder="final da contagem: "></p>
+      <p>Passo: <input type="number" id="txtp" placeholder="Quantos pular: "></p>
+      <button id="btnContar">Contar</button>
     </div>
     <div>
-      <p id="res">Resultado: </p>
+      <p id="res">Resultado:</p>
     </div>
   </section>
   <footer>
-    <p>&copy; <a href="http://github.com/mgosalan-dev/" target="_blank" rel="noopener noreferrer">mgosalan-dev</a></p>
+    <p>&copy; <a href="https://github.com/mgosalan-dev" target="_blank" rel="noopener">mgosalan-dev</a></p>
   </footer>
   <script src="../js/contador-simples.js"></script>
 </body>

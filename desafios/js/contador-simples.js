@@ -1,11 +1,10 @@
 function contar() {
-  // definindo variaveis ligadas ao HTML
   var ini = document.getElementById("txti");
   var fi = document.getElementById("txtf");
   var pas = document.getElementById("txtp");
   var r = document.getElementById("res");
 
-  if (ini.value.length == 0 || fi.value.length == 0 || pas.value.length == 0) {
+  if (ini.value.length == 0 || fi.value.length == 0) {
     alert("Opa, preenche todos os campos aí, meu consagrado! ⚠️");
     r.innerHTML = "Impossivel fazer a contagem";
     return; // para a função aqui
@@ -54,3 +53,5 @@ function contar() {
   conteudo += "🏁";
   r.innerHTML += conteudo;
 }
+// definindo variaveis ligadas ao HTML
+document.getElementById('btnContar').addEventListener('click', contar);
