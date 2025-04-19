@@ -1,0 +1,116 @@
+/* CSS estilo senior bolado */
+
+:root {
+  --bg-color: #0f0f0f;
+  --primary-color: #00ffaa;
+  --secondary-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --accent-color: #ff4081;
+  --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-stack);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+header {
+  background: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 255, 170, 0.2);
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+section {
+  background: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 64, 129, 0.15);
+  flex-grow: 1;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  background: #111;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+#resposta {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--primary-color);
+}
+
+@media (min-width: 600px) {
+  section div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  button {
+    grid-column: span 2;
+    justify-self: center;
+  }
+}
