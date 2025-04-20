@@ -3,27 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOMA ATÉ DIGITAR ZERO</title>
+    <title>Soma até digitar zero</title>
+    <link rel="stylesheet" href="../css/soma-ate-zero.css" />
   </head>
   <body>
     <header>
-      <h1>SOMA ATÉ DIGITAR ZERO</h1>
+      <h1>Soma até digitar zero</h1>
     </header>
-    <section>
-      <div>
-        <p>Somar: <input type="number" name="txtn" id="numero" placeholder="Valores: "/></p>
+
+    <main>
+      <section class="input-box">
+        <label for="numero">Digite um número:</label>
+        <input type="number" id="numero" placeholder="Ex: 10" />
         <button id="somar" title="Clique para somar">Somar</button>
-      </div>
-      <div>
-        <p id="continuar">continuar: </p>
-        <p id="resultado">Resultado: </p>
-      </div>
-    </section>
+      </section>
+
+      <section class="output-box">
+        <p id="continuar">Continuar:</p>
+        <p id="resultado">Resultado:</p>
+      </section>
+    </main>
+
     <footer>
       <p>
-        <a href="http://github.com/mgosalan-dev/" target="_blank" rel="noopener noreferrer">&copy;mgosalan-dev</a>
+        <a href="https://github.com/mgosalan-dev" target="_blank" rel="noopener noreferrer">
+          &copy; mgosalan-dev
+        </a>
       </p>
     </footer>
+
     <script src="../js/soma-ate-digitar-zero.js"></script>
   </body>
 </html>

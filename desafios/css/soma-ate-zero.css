@@ -1,0 +1,136 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte padrão clean */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #1e88e5;
+}
+
+/* Conteúdo principal */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Caixa de entrada */
+.input-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-box label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.input-box input {
+  padding: 10px;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.input-box button {
+  padding: 10px 20px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.input-box button:hover {
+  background-color: #1565c0;
+}
+
+/* Resultados */
+.output-box {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.output-box p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  word-break: break-word;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 20px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #1e88e5;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------ */
+/* 📱 Responsividade */
+/* ------------------ */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .input-box,
+  .output-box {
+    padding: 15px;
+  }
+
+  .input-box input,
+  .input-box button {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+  }
+
+  .input-box button {
+    padding: 12px;
+  }
+
+  .output-box p {
+    font-size: 1rem;
+  }
+}
