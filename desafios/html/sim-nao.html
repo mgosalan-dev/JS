@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sim ou Não</title>
+    <link rel="stylesheet" href="../css/sim-nao.css">
+  </head>
+  <body>
+    <header>
+      <h1>Sim ou Não</h1>
+    </header>
+
+    <main>
+      <section>
+        <p id="instrução">
+          Este sistema permanecerá ativo até o usuário digitar "Sim" ou "Não".
+        </p>
+
+        <form id="controladores">
+          <div class="campo">
+            <label
+              >Palavra:
+              <input
+                type="text"
+                name="txtp"
+                id="texto"
+                placeholder="sim ou não"
+              />
+            </label>
+            <p></p>
+            <button type="button" id="btnVerificar">Verificar</button>
+          </div>
+
+          <div class="campo">
+            <p id="resultado" class="retorno" aria-live="polite"></p>
+            <!-- o contador para fechar a pagina esta no js...-->
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; mgosalan-dev</p>
+    </footer>
+
+    <script src="../js/sim-nao.js"></script>
+  </body>
+</html>

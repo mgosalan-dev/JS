@@ -1,0 +1,157 @@
+/* Resetando um pouco os estilos padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configurações básicas do body */
+body {
+  font-family: 'Courier New', Courier, monospace; /* Fonte estilo máquina de escrever, bem clássica de RPG */
+  background: #2f2f2f; /* Fundo escuro com um toque de mistério */
+  color: #e0e0e0; /* Texto claro para contraste */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header estilizado como um título de jogo */
+header {
+  background: #b38b6d; /* Cor de madeira ou pergaminho */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Instruções com uma vibe de pergaminho */
+#instrução {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  background: #3e3e3e;
+  padding: 15px;
+  border-radius: 8px;
+  font-style: italic;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+}
+
+/* Formulário com fundo escuro e bordas arredondadas */
+form {
+  background: #444;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.campo {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Estilo do campo de input */
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid #b38b6d;
+  background: #333;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: 5px;
+  transition: background 0.3s;
+}
+
+input[type="text"]:focus {
+  background: #555;
+  outline: none;
+}
+
+/* Estilo do botão, com efeito de clique */
+button[type="button"] {
+  background: #9d7a48; /* Cor medieval, estilo botões de jogo */
+  color: #fff;
+  align-items: center;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto; 
+  margin-right: auto; 
+  
+}
+
+button[type="button"]:hover {
+  background: #7a5d3f; /* Cor mais escura no hover */
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+button[type="button"]:active {
+  transform: scale(0.98);
+}
+
+/* Resultado final (com estilo de destaque) */
+#resultado {
+  font-size: 1.4rem;
+  color: #b38b6d;
+  font-weight: bold;
+  padding: 20px;
+  background: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Footer com uma vibe de mensagem final do jogo */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #d0d0d0;
+  background: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  input[type="text"] {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  button[type="button"] {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  #resultado {
+    font-size: 1.2rem;
+  }
+}
