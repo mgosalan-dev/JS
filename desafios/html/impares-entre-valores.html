@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostrando os Ímpares</title>
+  <link rel="stylesheet" href="../css/mostrando-valores-impares.css">
+</head>
+<body>
+  <header>
+    <h1>Mostrando os Valores Ímpares</h1>
+  </header>
+  
+  <main>
+    <section>
+      <p class="instrucao">Selecione dois valores, e o sistema irá mostrar os números ímpares nesse intervalo.</p>
+      
+      <div class="controles">
+        <div class="campo">
+          <label for="inicio">Início:</label>
+          <input type="number" name="txtn" id="inicio" placeholder="ex: 0">
+          <p id="erro-inicio" class="erro"></p>
+        </div>
+        
+        <div class="campo">
+          <label for="fim">Fim:</label>
+          <input type="number" name="txtf" id="fim" placeholder="ex: 10">
+          <p id="erro-fim" class="erro"></p>
+        </div>
+        
+        <button id="btnContar">Contar Ímpares</button>
+      </div>
+      
+      <div class="resultado">
+        <p class="resultado-titulo">Resultado:</p>
+        <div id="resposta" class="numeros"></div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; mgosalan-dev</p>
+  </footer>
+
+  <script src="../js/mostrando-impares.js"></script>
+</body>
+</html>
