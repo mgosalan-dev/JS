@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sim ou Não</title>
-    <link rel="stylesheet" href="../css/sim-nao.css">
+    <link rel="stylesheet" href="sim-nao.css" />
   </head>
   <body>
     <header>
@@ -17,23 +17,22 @@
           Este sistema permanecerá ativo até o usuário digitar "Sim" ou "Não".
         </p>
 
-        <form id="controladores">
+        <form id="controladores" onsubmit="return false;">
           <div class="campo">
-            <label
-              >Palavra:
-              <input
+            <label>Palavra: </label>
+            <input
                 type="text"
                 name="txtp"
                 id="texto"
+                autocomplete="off"
                 placeholder="sim ou não"
               />
-            </label>
             <p></p>
             <button type="button" id="btnVerificar">Verificar</button>
           </div>
 
           <div class="campo">
-            <p id="resultado" class="retorno" aria-live="polite"></p>
+            <p id="resultado" class="retorno" aria-live="polite" role="status"></p>
             <!-- o contador para fechar a pagina esta no js...-->
           </div>
         </form>
@@ -44,6 +43,6 @@
       <p>&copy; mgosalan-dev</p>
     </footer>
 
-    <script src="../js/sim-nao.js"></script>
+    <script src="sim-nao.js"></script>
   </body>
 </html>
